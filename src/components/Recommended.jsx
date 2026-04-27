@@ -6,7 +6,7 @@ const Recommended = () => {
       {tags.map((tag) => (
         <button
           key={tag}
-          className="px-4 py-1 rounded-full text-sm border hover:bg-orange-500 hover:text-white transition"
+          className="px-4 py-2 rounded-md text-sm border-2 border-gray-200 hover:bg-orange-500 hover:text-white transition cursor-pointer"
         >
           {tag}
         </button>
