@@ -40,6 +40,8 @@ const ProductCard = ({ product }) => {
         {/* Rating */}
         <div className="flex items-center gap-1 text-sm">
           <FaStar className="text-orange-400" />
+          <FaStar className="text-orange-400" />
+          <FaStar className="text-orange-400" />
           <span>{rating}</span>
           <span className="text-gray-400">({reviews})</span>
         </div>
