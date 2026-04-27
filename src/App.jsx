@@ -47,7 +47,7 @@ const App = () => {
       <div className="flex max-w-7xl pt-17.5 mx-auto gap-8">
         {/* Sidebar */}
         <aside className="sticky top-17.5 pt-8 h-full w-50 bg-white border-r border-gray-200 hidden md:block">
-          <Sidebar />
+          <Sidebar handleFilterChange={handleFilterChange} />
         </aside>
 
         {/* Main Content */}
