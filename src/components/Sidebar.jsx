@@ -21,15 +21,14 @@ const Sidebar = ({ handleFilterChange }) => {
 
   const selectColor = (color) => {
     let newColor;
+    color = color.toLowerCase();
 
-    if (color === 'Black' || color === 'White') {
-      newColor = color.toLowerCase();
-    } else if (color === 'Navy') {
-      newColor = 'blue-900';
-    } else if (color === 'Brown') {
-      newColor = 'amber-800';
+    if (color === 'black' || color == 'white') {
+      newColor = color;
+    } else if (color == 'navy' || color == 'brown') {
+      newColor = color + '-900';
     } else {
-      newColor = color.toLowerCase();
+      newColor = color + '-500';
     }
 
     return newColor;
@@ -95,20 +94,23 @@ const Sidebar = ({ handleFilterChange }) => {
       <div>
         <h3 className="font-semibold mb-2">Color</h3>
         <div className="flex flex-col gap-2">
-          {colors.map((color, index) => (
-            <label
-              key={index}
-              onClick={() =>
-                handleFilterChange('color', color === 'All' ? '' : color)
-              }
-              className="color-labels flex gap-2 justify-start items-center cursor-pointer"
-            >
-              <span
-                className={`w-4 h-4 bg-${selectColor(color)}-500 border border-gray-300 rounded-full`}
-              ></span>
-              <p>{color}</p>
-            </label>
-          ))}
+          {colors.map((color) => {
+            let bgColor = selectColor(color);
+            return (
+              <label
+                key={color}
+                onClick={() =>
+                  handleFilterChange('color', color === 'All' ? '' : color)
+                }
+                className="color-labels flex gap-2 justify-start items-center cursor-pointer"
+              >
+                <span
+                  className={`w-4 h-4 bg-${bgColor} border border-gray-300 rounded-full`}
+                ></span>
+                <p>{color}</p>
+              </label>
+            );
+          })}
         </div>
       </div>
     </div>
