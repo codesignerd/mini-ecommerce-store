@@ -24,7 +24,7 @@ const App = () => {
       (filteredProducts.category === '' ||
         product.category === filteredProducts.category) &&
       (filteredProducts.price === '' ||
-        products.newPrice === filteredProducts.price) &&
+        product.newPrice <= filteredProducts.price) &&
       (filteredProducts.color === '' ||
         product.color === filteredProducts.color)
     );

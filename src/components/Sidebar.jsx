@@ -85,7 +85,7 @@ const Sidebar = ({ handleFilterChange }) => {
                   )
                 }
               />
-              <p>${price}</p>
+              <p>{price === 'None' ? price : `$${price}`}</p>
             </label>
           ))}
         </div>
