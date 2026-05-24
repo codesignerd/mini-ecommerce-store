@@ -2,7 +2,7 @@ const Recommended = ({ handleFilterChange }) => {
   const tags = ['All', 'Nike', 'Adidas', 'Zara', 'H&M', 'Puma'];
 
   return (
-    <div className="flex gap-3 flex-wrap mb-4">
+    <div className="flex gap-3 flex-wrap mb-6">
       {tags.map((tag) => (
         <button
           key={tag}

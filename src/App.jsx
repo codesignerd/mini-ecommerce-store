@@ -51,7 +51,7 @@ const App = () => {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 pt-8">
+        <main className="flex-1 pt-8 px-6 md:px-0">
           <Recommended handleFilterChange={handleFilterChange} />
 
           {/* Toolbar */}
